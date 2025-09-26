@@ -1,0 +1,51 @@
+{
+  "navigation": {
+    "home": "Home",
+    "privacyPolicy": "Privacy Policy",
+    "switchToJapanese": "日本語"
+  },
+  "company": {
+    "name": "OpenHealth Inc.",
+    "nameShort": "OpenHealth",
+    "description": "OpenHealth Inc. is a company specializing in healthcare software development. We leverage cutting-edge technology to deliver software solutions that contribute to the medical and health sectors.",
+    "business": "Business",
+    "businessDescription": "Healthcare Software Development",
+    "mission": "Mission",
+    "missionDescription": "We contribute to solving challenges in the medical and health sectors with cutting-edge technology, supporting better health and improved quality of life for people."
+  },
+  "footer": {
+    "copyright": "© 2025 OpenHealth Inc."
+  },
+  "privacyPolicy": {
+    "title": "Privacy Policy",
+    "intro": "OpenHealth Inc. (hereinafter referred to as \"the Company\") establishes the following Privacy Policy (hereinafter referred to as \"this Policy\") regarding the handling of personal information of users in the services provided on this website (hereinafter referred to as \"the Service\").",
+    "article1": {
+      "title": "Article 1 (Personal Information)",
+      "content": "\"Personal information\" refers to \"personal information\" as defined in the Personal Information Protection Act, which is information about living individuals that can identify specific individuals through names, dates of birth, addresses, telephone numbers, contact information, and other descriptions contained in the information, as well as data related to appearance, fingerprints, voiceprints, and information that can identify specific individuals from the information alone (personal identification information), such as health insurance card holder numbers."
+    },
+    "article2": {
+      "title": "Article 2 (Method of Collecting Personal Information)",
+      "content": "The Company may ask for personal information such as names, dates of birth, addresses, telephone numbers, email addresses, bank account numbers, credit card numbers, and driver's license numbers when users register for use. Additionally, the Company may collect transaction records and payment information containing users' personal information from transactions between users and partners from the Company's partners (including information providers, advertisers, and advertisement distributors, hereinafter referred to as \"Partners\")."
+    },
+    "article3": {
+      "title": "Article 3 (Purposes of Collecting and Using Personal Information)",
+      "content": "The purposes for which the Company collects and uses personal information are as follows:",
+      "purposes": [
+        "To provide and operate the Company's services",
+        "To respond to inquiries from users (including identity verification)",
+        "To send emails about new features, updates, campaigns, etc. of services being used by users and other services provided by the Company",
+        "For necessary communication such as maintenance and important notices",
+        "To identify users who violate the terms of use or attempt to use services for fraudulent or improper purposes and refuse their use",
+        "To allow users to view, change, delete their registration information, and view their usage status",
+        "To charge users for paid services",
+        "For purposes incidental to the above purposes of use"
+      ]
+    },
+    "article10": {
+      "title": "Article 10 (Contact Information)",
+      "content": "For inquiries regarding this Policy, please contact the following:"
+    },
+    "contact": "Contact Information",
+    "email": "info@openhealth.co.jp"
+  }
+}
