@@ -4,12 +4,13 @@ import { getDictionary } from '@/lib/dictionary'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 
-export async function generateMetadata({ params }: { params: { lang: Locale } }): Promise<Metadata> {
-  const dict = await getDictionary(params.lang)
+export async function generateMetadata({ params }: { params: Promise<{ lang: Locale }> }): Promise<Metadata> {
+  const { lang } = await params
+  const dict = await getDictionary(lang)
 
   return {
     title: dict.privacyPolicy.title,
-    description: params.lang === 'ja'
+    description: lang === 'ja'
       ? '株式会社OpenHealthのプライバシーポリシーです。個人情報の取扱いについて詳しく説明しています。'
       : 'OpenHealth Inc. Privacy Policy. Detailed information about how we handle personal information.',
     robots: {
@@ -18,17 +19,18 @@ export async function generateMetadata({ params }: { params: { lang: Locale } })
     },
     openGraph: {
       title: dict.privacyPolicy.title,
-      description: params.lang === 'ja'
+      description: lang === 'ja'
         ? '株式会社OpenHealthのプライバシーポリシー'
         : 'OpenHealth Inc. Privacy Policy',
     },
     alternates: {
-      canonical: `/${params.lang}/privacy-policy`,
+      canonical: `/${lang}/privacy-policy`,
     },
   }
 }
 
-export default async function PrivacyPolicy({ params: { lang } }: { params: { lang: Locale } }) {
+export default async function PrivacyPolicy({ params }: { params: Promise<{ lang: Locale }> }) {
+  const { lang } = await params
   const dict = await getDictionary(lang)
 
   return (

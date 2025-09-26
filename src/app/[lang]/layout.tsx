@@ -14,8 +14,9 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export async function generateMetadata({ params }: { params: { lang: Locale } }): Promise<Metadata> {
-  const dict = await getDictionary(params.lang)
+export async function generateMetadata({ params }: { params: Promise<{ lang: Locale }> }): Promise<Metadata> {
+  const { lang } = await params
+  const dict = await getDictionary(lang)
 
   return {
     title: {
@@ -23,7 +24,7 @@ export async function generateMetadata({ params }: { params: { lang: Locale } })
       template: `%s | ${dict.company.nameShort}`
     },
     description: dict.company.description,
-    keywords: params.lang === 'ja'
+    keywords: lang === 'ja'
       ? ['ヘルスケア', 'ソフトウェア開発', '医療技術', 'OpenHealth', 'デジタルヘルス']
       : ['healthcare', 'software development', 'medical technology', 'OpenHealth', 'digital health'],
     authors: [{ name: dict.company.name }],
@@ -39,8 +40,8 @@ export async function generateMetadata({ params }: { params: { lang: Locale } })
     },
     openGraph: {
       type: 'website',
-      locale: params.lang,
-      url: `https://openhealth.co.jp/${params.lang}`,
+      locale: lang,
+      url: `https://openhealth.co.jp/${lang}`,
       siteName: dict.company.nameShort,
       title: dict.company.name,
       description: dict.company.description,
@@ -58,7 +59,7 @@ export async function generateMetadata({ params }: { params: { lang: Locale } })
     },
     metadataBase: new URL('https://openhealth.co.jp'),
     alternates: {
-      canonical: `/${params.lang}`,
+      canonical: `/${lang}`,
       languages: {
         'ja': '/ja',
         'en': '/en',
@@ -71,15 +72,16 @@ export async function generateStaticParams() {
   return i18n.locales.map((locale) => ({ lang: locale }))
 }
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
   params,
 }: {
   children: React.ReactNode
-  params: { lang: Locale }
+  params: Promise<{ lang: Locale }>
 }) {
+  const { lang } = await params
   return (
-    <html lang={params.lang}>
+    <html lang={lang}>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >

@@ -3,7 +3,8 @@ import { getDictionary } from '@/lib/dictionary'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 
-export default async function Home({ params: { lang } }: { params: { lang: Locale } }) {
+export default async function Home({ params }: { params: Promise<{ lang: Locale }> }) {
+  const { lang } = await params
   const dict = await getDictionary(lang)
 
   return (
