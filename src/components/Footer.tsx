@@ -1,8 +1,9 @@
 import Link from 'next/link'
 import { type Locale } from '@/lib/i18n'
+import { type Dictionary } from '@/types/dictionary'
 
 interface FooterProps {
-  dict: any
+  dict: Dictionary
   lang: Locale
 }
 

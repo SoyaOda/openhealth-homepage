@@ -1,9 +1,10 @@
 import Link from 'next/link'
 import { type Locale } from '@/lib/i18n'
+import { type Dictionary } from '@/types/dictionary'
 import LanguageSwitcher from './LanguageSwitcher'
 
 interface HeaderProps {
-  dict: any
+  dict: Dictionary
   lang: Locale
 }
 
