@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "../globals.css";
 import { i18n, type Locale } from '@/lib/i18n'
 import { getDictionary } from '@/lib/dictionary'
+import { type PageProps } from '@/types/params'
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -14,7 +15,7 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export async function generateMetadata({ params }: { params: Promise<{ lang: Locale }> }): Promise<Metadata> {
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { lang } = await params
   const dict = await getDictionary(lang)
 
@@ -69,15 +70,14 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: Loc
 }
 
 export async function generateStaticParams() {
-  return i18n.locales.map((locale) => ({ lang: locale }))
+  return i18n.locales.map((locale) => ({ lang: locale as Locale }))
 }
 
 export default async function RootLayout({
   children,
   params,
-}: {
+}: PageProps & {
   children: React.ReactNode
-  params: Promise<{ lang: Locale }>
 }) {
   const { lang } = await params
   return (

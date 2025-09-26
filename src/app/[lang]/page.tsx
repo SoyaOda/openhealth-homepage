@@ -1,9 +1,9 @@
-import { type Locale } from '@/lib/i18n'
 import { getDictionary } from '@/lib/dictionary'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
+import { type PageProps } from '@/types/params'
 
-export default async function Home({ params }: { params: Promise<{ lang: Locale }> }) {
+export default async function Home({ params }: PageProps) {
   const { lang } = await params
   const dict = await getDictionary(lang)
 

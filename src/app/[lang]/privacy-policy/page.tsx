@@ -1,10 +1,10 @@
 import { type Metadata } from "next";
-import { type Locale } from '@/lib/i18n'
 import { getDictionary } from '@/lib/dictionary'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
+import { type PageProps } from '@/types/params'
 
-export async function generateMetadata({ params }: { params: Promise<{ lang: Locale }> }): Promise<Metadata> {
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { lang } = await params
   const dict = await getDictionary(lang)
 
@@ -29,7 +29,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: Loc
   }
 }
 
-export default async function PrivacyPolicy({ params }: { params: Promise<{ lang: Locale }> }) {
+export default async function PrivacyPolicy({ params }: PageProps) {
   const { lang } = await params
   const dict = await getDictionary(lang)
 
