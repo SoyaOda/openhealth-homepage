@@ -3,13 +3,13 @@ import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import { type Locale } from '@/lib/i18n'
 
-export default async function Home(props: { params: Promise<{ lang: Locale }> }) {
+export default async function Home(props: { params: Promise<{ lang: string }> }) {
   const { lang } = await props.params
-  const dict = await getDictionary(lang)
+  const dict = await getDictionary(lang as Locale)
 
   return (
     <div className="min-h-screen flex flex-col">
-      <Header dict={dict} lang={lang} />
+      <Header dict={dict} lang={lang as Locale} />
 
       <main className="flex-1">
         {/* Hero Section */}
@@ -108,7 +108,7 @@ export default async function Home(props: { params: Promise<{ lang: Locale }> })
         </section>
       </main>
 
-      <Footer dict={dict} lang={lang} />
+      <Footer dict={dict} lang={lang as Locale} />
     </div>
   )
 }
