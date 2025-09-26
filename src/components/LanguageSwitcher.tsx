@@ -19,7 +19,7 @@ export default function LanguageSwitcher({ currentLang }: LanguageSwitcherProps)
     return currentLang === 'ja' ? 'English' : '日本語'
   }
 
-  const getPathInOtherLanguage = () => {
+  const getPathInOtherLanguage = (): string => {
     const otherLang = getOtherLanguage()
     // Remove current language prefix and add new one
     const pathWithoutLang = pathname.replace(`/${currentLang}`, '') || ''
@@ -29,7 +29,7 @@ export default function LanguageSwitcher({ currentLang }: LanguageSwitcherProps)
   return (
     <div className="flex items-center">
       <Link
-        href={getPathInOtherLanguage()}
+        href={getPathInOtherLanguage() as `/${string}`}
         className="group flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-blue-500 to-teal-500 text-white font-semibold rounded-full hover:from-blue-600 hover:to-teal-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
       >
         <span className="text-sm">{currentLang === 'ja' ? '🇺🇸' : '🇯🇵'}</span>
