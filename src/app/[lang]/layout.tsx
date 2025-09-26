@@ -15,8 +15,8 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
-  const { lang } = await params
+export async function generateMetadata(props: { params: Promise<{ lang: Locale }> }): Promise<Metadata> {
+  const { lang } = await props.params
   const dict = await getDictionary(lang)
 
   return {
@@ -69,23 +69,21 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   }
 }
 
-export async function generateStaticParams() {
-  return i18n.locales.map((locale) => ({ lang: locale as Locale }))
+export async function generateStaticParams(): Promise<{ lang: Locale }[]> {
+  return i18n.locales.map((locale) => ({ lang: locale }))
 }
 
-export default async function RootLayout({
-  children,
-  params,
-}: PageProps & {
+export default async function RootLayout(props: {
   children: React.ReactNode
+  params: Promise<{ lang: Locale }>
 }) {
-  const { lang } = await params
+  const { lang } = await props.params
   return (
     <html lang={lang}>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        {props.children}
       </body>
     </html>
   );

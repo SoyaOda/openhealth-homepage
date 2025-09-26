@@ -1,10 +1,10 @@
 import { getDictionary } from '@/lib/dictionary'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
-import { type PageProps } from '@/types/params'
+import { type Locale } from '@/lib/i18n'
 
-export default async function Home({ params }: PageProps) {
-  const { lang } = await params
+export default async function Home(props: { params: Promise<{ lang: Locale }> }) {
+  const { lang } = await props.params
   const dict = await getDictionary(lang)
 
   return (
