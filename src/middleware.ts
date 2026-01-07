@@ -33,6 +33,7 @@ export function middleware(request: NextRequest) {
     [
       '/manifest.json',
       '/favicon.ico',
+      '/app-ads.txt',
       // Your other files in `public`
     ].includes(pathname)
   )
