@@ -34,6 +34,7 @@ export function middleware(request: NextRequest) {
       '/manifest.json',
       '/favicon.ico',
       '/app-ads.txt',
+      '/google944bef3c8668483d.html',
       // Your other files in `public`
     ].includes(pathname)
   )
