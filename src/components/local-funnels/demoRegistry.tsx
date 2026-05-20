@@ -1,6 +1,7 @@
 import type { ComponentType } from 'react'
 import HappinessCleanDemo from './HappinessCleanDemo'
 import SakuraiCleanDemo from './SakuraiCleanDemo'
+import WorldAirconDemo from './WorldAirconDemo'
 
 export type LocalFunnelDemo = {
   slug: string
@@ -40,6 +41,19 @@ export const localFunnelDemos: LocalFunnelDemo[] = [
     publicUrlPath: '/ja/local-funnels/demo/sakuraiclean-aircon',
     previewImagePath: '/assets/local-funnels/sakuraiclean/demo-desktop1440.png',
     previewPdfPath: '/assets/local-funnels/sakuraiclean/sakuraiclean-demo-preview.pdf',
+    outreachUse: 'first_send_visual_url_and_pdf_attachment',
+  },
+  {
+    slug: 'worldaircon-install',
+    projectId: 'photo_estimate_worldaircon_install',
+    title: 'ワールドエアコン様向け 機器写真相談デモ',
+    description:
+      '取付・修理・保守点検の電話/メール前確認を、室内機・室外機・型番・設置環境の写真つきで整理するOpenHealthの候補別デモです。',
+    component: WorldAirconDemo,
+    noindex: true,
+    publicUrlPath: '/ja/local-funnels/demo/worldaircon-install',
+    previewImagePath: '/assets/local-funnels/worldaircon/demo-desktop1440.png',
+    previewPdfPath: '/assets/local-funnels/worldaircon/worldaircon-demo-preview.pdf',
     outreachUse: 'first_send_visual_url_and_pdf_attachment',
   },
 ]
