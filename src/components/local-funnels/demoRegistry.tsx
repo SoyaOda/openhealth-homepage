@@ -1,5 +1,6 @@
 import type { ComponentType } from 'react'
 import HappinessCleanDemo from './HappinessCleanDemo'
+import SakuraiCleanDemo from './SakuraiCleanDemo'
 
 export type LocalFunnelDemo = {
   slug: string
@@ -26,6 +27,19 @@ export const localFunnelDemos: LocalFunnelDemo[] = [
     publicUrlPath: '/ja/local-funnels/demo/happinessclean-aircon',
     previewImagePath: '/assets/local-funnels/happinessclean/demo-desktop1440.png',
     previewPdfPath: '/assets/local-funnels/happinessclean/happinessclean-demo-preview.pdf',
+    outreachUse: 'first_send_visual_url_and_pdf_attachment',
+  },
+  {
+    slug: 'sakuraiclean-aircon',
+    projectId: 'photo_estimate_sakuraiclean_aircon',
+    title: 'サクライクリーン様向け 写真相談デモ',
+    description:
+      'エアコンクリーニングの電話前確認を、写真・メーカー・高さ・住所エリア・希望日つきで整理するOpenHealthの候補別デモです。',
+    component: SakuraiCleanDemo,
+    noindex: true,
+    publicUrlPath: '/ja/local-funnels/demo/sakuraiclean-aircon',
+    previewImagePath: '/assets/local-funnels/sakuraiclean/demo-desktop1440.png',
+    previewPdfPath: '/assets/local-funnels/sakuraiclean/sakuraiclean-demo-preview.pdf',
     outreachUse: 'first_send_visual_url_and_pdf_attachment',
   },
 ]
