@@ -1,5 +1,7 @@
 import type { ComponentType } from 'react'
 import HappinessCleanDemo from './HappinessCleanDemo'
+import CleaningPhotoEstimateTemplateDemo from './CleaningPhotoEstimateTemplateDemo'
+import ReformInteriorTemplateDemo from './ReformInteriorTemplateDemo'
 import SakuraiCleanDemo from './SakuraiCleanDemo'
 import WorldAirconDemo from './WorldAirconDemo'
 
@@ -55,6 +57,32 @@ export const localFunnelDemos: LocalFunnelDemo[] = [
     previewImagePath: '/assets/local-funnels/worldaircon/demo-desktop1440.png',
     previewPdfPath: '/assets/local-funnels/worldaircon/worldaircon-demo-preview.pdf',
     outreachUse: 'first_send_visual_url_and_pdf_attachment',
+  },
+  {
+    slug: 'cleaning-photo-estimate-template',
+    projectId: 'photo_estimate_cleaning_template',
+    title: '清掃業向け 写真見積もり導線デモ',
+    description:
+      '清掃業のGoogleマップ/検索流入を、写真・希望日・返信方法つきの直接問い合わせに変えるOpenHealthの再利用デモです。',
+    component: CleaningPhotoEstimateTemplateDemo,
+    noindex: true,
+    publicUrlPath: '/ja/local-funnels/demo/cleaning-photo-estimate-template',
+    previewImagePath: '/assets/local-funnels/cleaning-template/demo-desktop1440.png',
+    previewPdfPath: '/assets/local-funnels/cleaning-template/cleaning-template-demo-preview.pdf',
+    outreachUse: 'list_wave_template_demo_plus_specific_observation',
+  },
+  {
+    slug: 'reform-interior-photo-estimate-template',
+    projectId: 'photo_estimate_reform_interior_template',
+    title: 'リフォーム・内装向け 写真初回相談デモ',
+    description:
+      'リフォーム/内装/外構の初回相談を、写真・予算・希望時期・現地調査条件つきで整理するOpenHealthの再利用デモです。',
+    component: ReformInteriorTemplateDemo,
+    noindex: true,
+    publicUrlPath: '/ja/local-funnels/demo/reform-interior-photo-estimate-template',
+    previewImagePath: '/assets/local-funnels/reform-template/demo-desktop1440.png',
+    previewPdfPath: '/assets/local-funnels/reform-template/reform-template-demo-preview.pdf',
+    outreachUse: 'list_wave_template_demo_plus_specific_observation',
   },
 ]
 
