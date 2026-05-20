@@ -3,6 +3,8 @@ import HappinessCleanDemo from './HappinessCleanDemo'
 import CleaningPhotoEstimateTemplateDemo from './CleaningPhotoEstimateTemplateDemo'
 import ReformInteriorTemplateDemo from './ReformInteriorTemplateDemo'
 import SakuraiCleanDemo from './SakuraiCleanDemo'
+import GreenExteriorDemo from './GreenExteriorDemo'
+import SokichiKirikoDemo from './SokichiKirikoDemo'
 import WorldAirconDemo from './WorldAirconDemo'
 
 export type LocalFunnelDemo = {
@@ -56,6 +58,32 @@ export const localFunnelDemos: LocalFunnelDemo[] = [
     publicUrlPath: '/ja/local-funnels/demo/worldaircon-install',
     previewImagePath: '/assets/local-funnels/worldaircon/demo-desktop1440.png',
     previewPdfPath: '/assets/local-funnels/worldaircon/worldaircon-demo-preview.pdf',
+    outreachUse: 'first_send_visual_url_and_pdf_attachment',
+  },
+  {
+    slug: 'greenexterior-setagaya',
+    projectId: 'maps_demo_greenexterior_setagaya',
+    title: 'Green Exterior様向け 写真付き外構相談デモ',
+    description:
+      '外構・エクステリアの初回相談を、写真・図面・予算感・現地調査希望つきで整理するOpenHealthの候補別デモです。',
+    component: GreenExteriorDemo,
+    noindex: true,
+    publicUrlPath: '/ja/local-funnels/demo/greenexterior-setagaya',
+    previewImagePath: '/assets/local-funnels/greenexterior/demo-desktop1440.png',
+    previewPdfPath: '/assets/local-funnels/greenexterior/greenexterior-demo-preview.pdf',
+    outreachUse: 'first_send_visual_url_and_pdf_attachment',
+  },
+  {
+    slug: 'sokichi-kiriko',
+    projectId: 'inbound_sokichi_kiriko',
+    title: '創吉 切子体験教室様向け 多言語予約前確認デモ',
+    description:
+      '浅草の体験予約前に、言語希望・人数・年齢・コース・連絡先を整理して既存予約/メールへ流すOpenHealthの候補別デモです。',
+    component: SokichiKirikoDemo,
+    noindex: true,
+    publicUrlPath: '/ja/local-funnels/demo/sokichi-kiriko',
+    previewImagePath: '/assets/local-funnels/sokichi-kiriko/demo-desktop1440.png',
+    previewPdfPath: '/assets/local-funnels/sokichi-kiriko/sokichi-kiriko-demo-preview.pdf',
     outreachUse: 'first_send_visual_url_and_pdf_attachment',
   },
   {
