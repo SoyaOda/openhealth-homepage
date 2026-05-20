@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import { type Locale } from '@/lib/i18n'
 import { type Dictionary } from '@/types/dictionary'
 import LanguageSwitcher from './LanguageSwitcher'
@@ -18,11 +19,13 @@ export default function Header({ dict, lang }: HeaderProps) {
             href={`/${lang}`}
             className="group flex items-center space-x-3 text-xl font-black text-gray-900 transition-all duration-300 hover:text-blue-600 sm:text-2xl"
           >
-            <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-teal-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-              <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-              </svg>
-            </div>
+            <Image
+              src="/assets/openhealth/openhealth-logo-icon.png"
+              alt=""
+              width={40}
+              height={40}
+              className="h-10 w-10 rounded-xl object-contain transition-transform duration-300 group-hover:scale-110"
+            />
             <span className="tracking-tight">{dict.company.nameShort}</span>
           </Link>
         </div>

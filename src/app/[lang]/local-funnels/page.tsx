@@ -90,12 +90,21 @@ export async function generateMetadata(props: { params: Promise<{ lang: string }
       title,
       description,
       siteName: dict.company.nameShort,
+      images: [
+        {
+          url: '/assets/openhealth/openhealth-logo-og.png',
+          width: 1200,
+          height: 630,
+          alt: dict.company.nameShort,
+        },
+      ],
     },
     twitter: {
       card: 'summary_large_image',
       title,
       description,
       creator: '@openhealth',
+      images: ['/assets/openhealth/openhealth-logo-og.png'],
     },
   }
 }
@@ -106,6 +115,9 @@ export default async function LocalAiPage(props: { params: Promise<{ lang: strin
   const dict = await getDictionary(locale)
   const localAi = dict.company.localAi
   const isJa = locale === 'ja'
+  const heroTitleLines = isJa
+    ? ['Googleマップや検索で', '見つかった見込み客を、', '写真見積もり・予約前確認・', '直接問い合わせに変える。']
+    : [localAi.title]
   const serviceJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Service',
@@ -138,10 +150,14 @@ export default async function LocalAiPage(props: { params: Promise<{ lang: strin
                 {localAi.badge}
               </div>
               <div className="space-y-6">
-                <h1 className="max-w-4xl break-all text-4xl font-black leading-tight tracking-tight md:break-normal md:text-6xl">
-                  {localAi.title}
+                <h1 className="max-w-4xl break-words text-3xl font-black leading-tight tracking-tight [overflow-wrap:anywhere] sm:text-4xl md:text-6xl">
+                  {heroTitleLines.map((line) => (
+                    <span key={line} className="block">
+                      {line}
+                    </span>
+                  ))}
                 </h1>
-                <p className="max-w-3xl break-words text-lg leading-8 text-slate-200 md:text-xl">
+                <p className="max-w-3xl break-words text-lg leading-8 text-slate-200 [overflow-wrap:anywhere] md:text-xl">
                   {localAi.subtitle}
                 </p>
               </div>

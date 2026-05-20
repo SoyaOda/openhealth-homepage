@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import { type Locale } from '@/lib/i18n'
 import { type Dictionary } from '@/types/dictionary'
 
@@ -16,11 +17,13 @@ export default function Footer({ dict, lang }: FooterProps) {
           {/* Company Info */}
           <div className="space-y-4">
             <div className="flex items-center space-x-3">
-              <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-teal-500 rounded-xl flex items-center justify-center">
-                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                </svg>
-              </div>
+              <Image
+                src="/assets/openhealth/openhealth-logo-icon.png"
+                alt=""
+                width={40}
+                height={40}
+                className="h-10 w-10 rounded-xl bg-white object-contain"
+              />
               <h3 className="text-xl font-bold">{dict.company.nameShort}</h3>
             </div>
             <p className="text-gray-300 leading-relaxed">
