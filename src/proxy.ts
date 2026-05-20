@@ -29,6 +29,7 @@ export function proxy(request: NextRequest) {
       '/robots.txt',
       '/sitemap.xml',
     ].includes(pathname)
+    || pathname.startsWith('/local-funnels/')
   ) {
     return
   }
