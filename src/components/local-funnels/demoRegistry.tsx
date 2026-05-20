@@ -24,8 +24,8 @@ export const localFunnelDemos: LocalFunnelDemo[] = [
     component: HappinessCleanDemo,
     noindex: true,
     publicUrlPath: '/ja/local-funnels/demo/happinessclean-aircon',
-    previewImagePath: '/ja/local-funnels/happinessclean/demo-desktop1440.png',
-    previewPdfPath: '/ja/local-funnels/happinessclean/happinessclean-demo-preview.pdf',
+    previewImagePath: '/assets/local-funnels/happinessclean/demo-desktop1440.png',
+    previewPdfPath: '/assets/local-funnels/happinessclean/happinessclean-demo-preview.pdf',
     outreachUse: 'first_send_visual_url_and_pdf_attachment',
   },
 ]

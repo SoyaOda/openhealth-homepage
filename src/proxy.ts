@@ -30,6 +30,7 @@ export function proxy(request: NextRequest) {
       '/sitemap.xml',
     ].includes(pathname)
     || pathname.startsWith('/local-funnels/')
+    || pathname.startsWith('/assets/')
   ) {
     return
   }
