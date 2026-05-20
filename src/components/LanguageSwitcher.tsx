@@ -30,11 +30,11 @@ export default function LanguageSwitcher({ currentLang }: LanguageSwitcherProps)
     <div className="flex items-center">
       <Link
         href={getPathInOtherLanguage() as `/${string}`}
-        className="group flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-blue-500 to-teal-500 text-white font-semibold rounded-full hover:from-blue-600 hover:to-teal-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+        className="group flex items-center space-x-1.5 rounded-full bg-gradient-to-r from-blue-500 to-teal-500 px-3 py-2 font-semibold text-white shadow-lg transition-all duration-300 hover:scale-105 hover:from-blue-600 hover:to-teal-600 hover:shadow-xl sm:space-x-2 sm:px-4"
       >
         <span className="text-sm">{currentLang === 'ja' ? '🇺🇸' : '🇯🇵'}</span>
         <span className="text-sm">{getOtherLanguageLabel()}</span>
-        <svg className="w-3 h-3 group-hover:translate-x-0.5 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg className="hidden h-3 w-3 transition-transform duration-300 group-hover:translate-x-0.5 sm:block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
         </svg>
       </Link>

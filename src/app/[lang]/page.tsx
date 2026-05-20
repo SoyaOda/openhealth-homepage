@@ -37,14 +37,14 @@ export default async function Home(props: { params: Promise<{ lang: string }> })
 
               {/* CTA Buttons */}
               <div className="flex flex-col sm:flex-row gap-4 justify-center mt-12">
-                <button className="group relative inline-flex items-center px-8 py-4 bg-white text-blue-600 font-semibold rounded-full shadow-2xl hover:shadow-cyan-200/50 transition-all duration-300 transform hover:scale-105">
-                  <span className="relative z-10">{lang === 'ja' ? 'サービスについて' : 'Our Services'}</span>
+                <a href={`/${lang}/local-funnels`} className="group relative inline-flex items-center px-8 py-4 bg-white text-blue-600 font-semibold rounded-full shadow-2xl hover:shadow-cyan-200/50 transition-all duration-300 transform hover:scale-105">
+                  <span className="relative z-10">{lang === 'ja' ? '問い合わせ導線を見る' : 'View Inquiry Funnels'}</span>
                   <div className="absolute inset-0 bg-gradient-to-r from-cyan-100 to-white rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                </button>
+                </a>
 
-                <button className="group relative inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold rounded-full hover:bg-white hover:text-blue-600 transition-all duration-300 transform hover:scale-105">
+                <a href="mailto:info@openhealth.co.jp" className="group relative inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold rounded-full hover:bg-white hover:text-blue-600 transition-all duration-300 transform hover:scale-105">
                   <span>{lang === 'ja' ? 'お問い合わせ' : 'Contact Us'}</span>
-                </button>
+                </a>
               </div>
             </div>
           </div>

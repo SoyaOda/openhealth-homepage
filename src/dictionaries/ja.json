@@ -1,6 +1,7 @@
 {
   "navigation": {
     "home": "ホーム",
+    "localAi": "問い合わせ導線",
     "privacyPolicy": "プライバシーポリシー",
     "switchToEnglish": "English"
   },
@@ -11,7 +12,31 @@
     "business": "事業内容",
     "businessDescription": "ヘルスケアソフトウェア開発",
     "mission": "ミッション",
-    "missionDescription": "最先端のテクノロジーで医療・健康分野の課題解決に貢献し、人々のより良い健康と生活の質向上を支援します。"
+    "missionDescription": "最先端のテクノロジーで医療・健康分野の課題解決に貢献し、人々のより良い健康と生活の質向上を支援します。",
+    "address": "〒530-0001 大阪府大阪市北区梅田1丁目2番2号 大阪駅前第2ビル12-12",
+    "phone": "080-6827-1623",
+    "localAi": {
+      "badge": "地域サービス向け 問い合わせ導線構築",
+      "title": "Googleマップや検索で見つかった見込み客を、写真見積もり・予約前確認・直接問い合わせに変える。",
+      "subtitle": "OpenHealthは、地域サービス事業者向けに個別デモを高速に作り、Web・LINE・電話・メールの中から事業者が返しやすい導線へ接続します。HP制作ではなく、問い合わせ獲得の仕組みを小さく検証します。",
+      "primaryCta": "メールで相談する",
+      "secondaryCta": "電話で相談する",
+      "lineCta": "LINEで相談する",
+      "lineReady": "LINE公式アカウントでもデモ確認・相談・パイロット連絡を受け付けます",
+      "proofLabel": "初期55,000円〜 / 月額11,000円〜 / 2週間テスト可",
+      "offersTitle": "最初に検証する3つの導線",
+      "offersSubtitle": "業種ごとにWeb、LINE、電話、メール、Instagramのどれが効くかを見ながら、反応の良い型だけを残します。",
+      "workflowTitle": "診断から送信までの流れ",
+      "workflowSubtitle": "候補調査、個別デモ、視覚/機能レビュー、送信、返信ログまでを同じ基盤で回します。",
+      "channelsTitle": "チャネルは業種別に選ぶ",
+      "channelsSubtitle": "エアコンや外構は写真フォーム、緊急系は電話、店舗/観光は多言語Webや予約導線、LINE運用済み事業者はLINE通知を優先します。",
+      "pricingTitle": "小さく試せる価格",
+      "pricingSubtitle": "既存の集客/マッチングサービスは件数が増えるほど手数料が重くなりがちです。OpenHealthは小さく作って試せる形にし、初期費と月額を抑えながら事業者ごとに調整します。",
+      "contactTitle": "まずは1社・1業種で検証",
+      "contactSubtitle": "公開情報だけで課題を診断し、許諾済み素材または生成素材でデモを作成します。GoogleレビューやGoogle写真の無断転載は使いません。",
+      "demoAnchorLabel": "デモを見る",
+      "pricingAnchorLabel": "料金目安を見る"
+    }
   },
   "footer": {
     "copyright": "© 2025 OpenHealth Inc."

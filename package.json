@@ -10,8 +10,9 @@
   },
   "dependencies": {
     "@formatjs/intl-localematcher": "^0.6.1",
+    "@vercel/analytics": "^2.0.1",
     "negotiator": "^1.0.0",
-    "next": "^16.1.1",
+    "next": "^16.2.6",
     "react": "19.1.0",
     "react-dom": "19.1.0",
     "server-only": "^0.0.1"
@@ -27,5 +28,8 @@
     "eslint-config-next": "^16.1.1",
     "tailwindcss": "^4",
     "typescript": "^5"
+  },
+  "overrides": {
+    "postcss": "^8.5.15"
   }
 }

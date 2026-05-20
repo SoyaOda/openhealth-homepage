@@ -45,6 +45,14 @@ export default function Footer({ dict, lang }: FooterProps) {
               </li>
               <li>
                 <Link
+                  href={`/${lang}/local-funnels`}
+                  className="text-gray-300 hover:text-white transition-colors hover:underline"
+                >
+                  {dict.navigation.localAi}
+                </Link>
+              </li>
+              <li>
+                <Link
                   href={`/${lang}/privacy-policy`}
                   className="text-gray-300 hover:text-white transition-colors hover:underline"
                 >
@@ -58,12 +66,19 @@ export default function Footer({ dict, lang }: FooterProps) {
           <div className="space-y-4">
             <h4 className="text-lg font-semibold">{lang === 'ja' ? 'お問い合わせ' : 'Contact'}</h4>
             <div className="space-y-3">
-              <div className="flex items-center space-x-3 text-gray-300">
+              <a href={`mailto:${dict.privacyPolicy.email}`} className="flex items-center space-x-3 text-gray-300 hover:text-white">
                 <svg className="w-5 h-5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 </svg>
                 <span className="font-mono">{dict.privacyPolicy.email}</span>
-              </div>
+              </a>
+              <a href="tel:08068271623" className="flex items-center space-x-3 text-gray-300 hover:text-white">
+                <svg className="w-5 h-5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2 5.5A2.5 2.5 0 014.5 3h2A1.5 1.5 0 018 4.25l.52 2.61A1.5 1.5 0 017.8 8.5l-1 .5a13 13 0 006.7 6.7l.5-1a1.5 1.5 0 011.64-.72l2.61.52A1.5 1.5 0 0119.5 16v2A2.5 2.5 0 0117 20.5h-.5A14.5 14.5 0 012 6z" />
+                </svg>
+                <span className="font-mono">{dict.company.phone}</span>
+              </a>
+              <p className="text-sm text-gray-400 leading-relaxed">{dict.company.address}</p>
             </div>
           </div>
         </div>

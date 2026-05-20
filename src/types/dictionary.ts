@@ -1,6 +1,7 @@
 export interface Dictionary {
   navigation: {
     home: string
+    localAi: string
     privacyPolicy: string
     switchToEnglish?: string
     switchToJapanese?: string
@@ -13,6 +14,30 @@ export interface Dictionary {
     businessDescription: string
     mission: string
     missionDescription: string
+    address: string
+    phone: string
+    localAi: {
+      badge: string
+      title: string
+      subtitle: string
+      primaryCta: string
+      secondaryCta: string
+      lineCta: string
+      lineReady: string
+      proofLabel: string
+      offersTitle: string
+      offersSubtitle: string
+      workflowTitle: string
+      workflowSubtitle: string
+      channelsTitle: string
+      channelsSubtitle: string
+      pricingTitle: string
+      pricingSubtitle: string
+      contactTitle: string
+      contactSubtitle: string
+      demoAnchorLabel: string
+      pricingAnchorLabel: string
+    }
   }
   footer: {
     copyright: string

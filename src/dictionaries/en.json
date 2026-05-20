@@ -1,6 +1,7 @@
 {
   "navigation": {
     "home": "Home",
+    "localAi": "Inquiry Funnels",
     "privacyPolicy": "Privacy Policy",
     "switchToJapanese": "日本語"
   },
@@ -11,7 +12,31 @@
     "business": "Business",
     "businessDescription": "Healthcare Software Development",
     "mission": "Mission",
-    "missionDescription": "We contribute to solving challenges in the medical and health sectors with cutting-edge technology, supporting better health and improved quality of life for people."
+    "missionDescription": "We contribute to solving challenges in the medical and health sectors with cutting-edge technology, supporting better health and improved quality of life for people.",
+    "address": "Osaka Ekimae 2nd Building 12-12, 1-2-2 Umeda, Kita-ku, Osaka 530-0001, Japan",
+    "phone": "080-6827-1623",
+    "localAi": {
+      "badge": "Inquiry funnels for local businesses",
+      "title": "Turn visitors from Google Maps and search into photo estimates, booking pre-checks, and direct inquiries.",
+      "subtitle": "OpenHealth builds fast, candidate-specific demos for local service businesses and connects them to the channel operators can actually answer: web, LINE, phone, email, or Instagram.",
+      "primaryCta": "Email us",
+      "secondaryCta": "Call us",
+      "lineCta": "Talk on LINE",
+      "lineReady": "The LINE Official Account is available for demos, consultation, and pilot support.",
+      "proofLabel": "From JPY 55,000 setup / JPY 11,000 monthly / two-week pilot available",
+      "offersTitle": "Three funnels we test first",
+      "offersSubtitle": "We keep the routes that get real replies and paid pilots, then template only what works.",
+      "workflowTitle": "From diagnosis to outreach",
+      "workflowSubtitle": "Candidate research, custom demos, visual/function review, outreach, and reply logging run through one operating system.",
+      "channelsTitle": "Channel choice depends on the business",
+      "channelsSubtitle": "Photo forms fit AC/exterior work, phone fits urgent services, multilingual web fits tourism, and LINE works when the operator already lives there.",
+      "pricingTitle": "Small enough to test",
+      "pricingSubtitle": "Lead marketplaces can become expensive as volume grows. OpenHealth builds small direct routes that keep setup/monthly fees lower and tune the workflow for each operator.",
+      "contactTitle": "Start with one area and one category",
+      "contactSubtitle": "We diagnose from public information and build demos with generated, licensed, or client-provided assets. We do not copy Google reviews or Google Maps photos.",
+      "demoAnchorLabel": "View demos",
+      "pricingAnchorLabel": "See pricing"
+    }
   },
   "footer": {
     "copyright": "© 2025 OpenHealth Inc."

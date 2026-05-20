@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { Analytics } from '@vercel/analytics/next'
 import "../globals.css";
 import { i18n, type Locale } from '@/lib/i18n'
 import { getDictionary } from '@/lib/dictionary'
@@ -41,7 +42,7 @@ export async function generateMetadata(props: { params: Promise<{ lang: string }
     openGraph: {
       type: 'website',
       locale: lang,
-      url: `https://openhealth.co.jp/${lang}`,
+      url: `https://www.openhealth.co.jp/${lang}`,
       siteName: dict.company.nameShort,
       title: dict.company.name,
       description: dict.company.description,
@@ -57,7 +58,7 @@ export async function generateMetadata(props: { params: Promise<{ lang: string }
       shortcut: '/favicon.svg',
       apple: '/favicon.svg',
     },
-    metadataBase: new URL('https://openhealth.co.jp'),
+    metadataBase: new URL('https://www.openhealth.co.jp'),
     alternates: {
       canonical: `/${lang}`,
       languages: {
@@ -86,6 +87,7 @@ export default async function RootLayout(props: {
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {props.children}
+        <Analytics />
       </body>
     </html>
   );
