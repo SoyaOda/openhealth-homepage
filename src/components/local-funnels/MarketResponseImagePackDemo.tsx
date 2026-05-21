@@ -204,6 +204,27 @@ const variants: Record<Variant['slug'], Variant> = {
 export function MarketResponseImagePackDemo({ slug }: { slug: Variant['slug'] }) {
   const variant = variants[slug]
   const isEnglish = slug === 'market-us-home-missedcall'
+  const projectIdBySlug: Record<Variant['slug'], string> = {
+    'market-reform-photoquote': 'market_response_reform_photoquote_001',
+    'market-inbound-directbook': 'market_response_inbound_directbook_001',
+    'market-us-home-missedcall': 'market_response_us_home_missedcall_001',
+  }
+  const hallmarkBySlug: Record<Variant['slug'], { skeleton: string; genre: string }> = {
+    'market-reform-photoquote': {
+      skeleton: 'narrative-proof-stack-operator-command-center',
+      genre: 'modern-minimal',
+    },
+    'market-inbound-directbook': {
+      skeleton: 'travel-concierge-split-journey-owner-inbox',
+      genre: 'editorial',
+    },
+    'market-us-home-missedcall': {
+      skeleton: 'after-hours-recovery-console-homeowner-callback',
+      genre: 'modern-minimal',
+    },
+  }
+  const projectId = projectIdBySlug[variant.slug]
+  const hallmark = hallmarkBySlug[variant.slug]
   const accentClass = {
     emerald: 'bg-emerald-500 text-emerald-950 border-emerald-200',
     rose: 'bg-rose-400 text-rose-950 border-rose-200',
@@ -217,7 +238,9 @@ export function MarketResponseImagePackDemo({ slug }: { slug: Variant['slug'] })
       data-composition-source={variant.slug}
       data-hero-asset="custom-css-visual-fallback-pending-chatgpt-images"
       data-motion-plan="css-scroll-reveal-ready-remotion-storyboard"
-      data-remotion-storyboard={`artifacts/rich_design/${variant.slug.replace('market-', 'market_response_')}/remotion_storyboard.md`}
+      data-remotion-storyboard={`artifacts/rich_design/${projectId}/remotion_storyboard.md`}
+      data-hallmark-skeleton={hallmark.skeleton}
+      data-hallmark-genre={hallmark.genre}
     >
       <main>
         <section className={`relative overflow-hidden bg-gradient-to-br ${variant.bg} px-4 py-7 text-white sm:py-10 lg:py-14`}>
