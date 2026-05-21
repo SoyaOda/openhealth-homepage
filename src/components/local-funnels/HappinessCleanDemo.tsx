@@ -55,8 +55,8 @@ export default function HappinessCleanDemo() {
       <header className="sticky top-0 z-30 border-b border-slate-200/80 bg-white/90 backdrop-blur-xl">
         <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3">
           <div>
-            <p className="text-xs font-bold uppercase tracking-[0.18em] text-sky-700">OpenHealth demo</p>
-            <h1 className="text-base font-black sm:text-xl">ハピネスクリーン様向け 写真見積もり相談デモ</h1>
+            <p className="text-xs font-bold uppercase tracking-[0.18em] text-sky-700">OpenHealth preview</p>
+            <h1 className="text-base font-black sm:text-xl">ハピネスクリーン様向け 写真見積もり相談導入イメージ</h1>
           </div>
           <div className="hidden items-center gap-2 text-sm font-bold text-slate-600 sm:flex">
             <span className="rounded-full bg-emerald-100 px-3 py-1 text-emerald-800">1分で確認</span>
@@ -72,7 +72,7 @@ export default function HappinessCleanDemo() {
               <div className="relative">
                 <Image
                   src={`${publicAssetBase}/ac-cleaning-inquiry-hero.png`}
-                  alt="エアコン洗浄の写真見積もり相談デモ"
+                  alt="エアコン洗浄の写真見積もり相談導入イメージ"
                   width={1672}
                   height={941}
                   priority
@@ -89,7 +89,7 @@ export default function HappinessCleanDemo() {
                     型番・設置場所・希望日を先に受け取る相談ページ
                   </h2>
                   <p className="max-w-2xl text-base leading-8 text-slate-600 sm:text-lg">
-                    公開サイトの料金・対応エリア・駐車場条件を活かし、電話前に必要な情報をスマホで整理して送れるデモです。
+                    公開サイトの料金・対応エリア・駐車場条件を活かし、電話前に必要な情報をスマホで整理して送れる導入イメージです。
                     既存の電話導線は残したまま、写真付きの相談だけを追加できます。
                   </p>
                 </div>
@@ -107,7 +107,7 @@ export default function HappinessCleanDemo() {
                 </div>
                 <div className="flex flex-col gap-3 sm:flex-row">
                   <a href="#try" className="rounded-full bg-slate-950 px-5 py-3 text-center font-black text-white shadow-lg hover:-translate-y-0.5">
-                    デモを試す
+                    画面を確認する
                   </a>
                   <TrackedCtaLink
                     href={`${publicAssetBase}/happinessclean-demo-preview.pdf`}
@@ -258,10 +258,10 @@ export default function HappinessCleanDemo() {
             <div>
               <p className="text-sm font-black text-sky-200">OpenHealth</p>
               <h2 className="text-2xl font-black">この導線を実装する場合のご相談</h2>
-              <p className="mt-2 text-sm leading-6 text-slate-300">公開情報だけで作った仮デモです。実装時は御社確認済みの写真・文言・返信先に合わせて調整します。</p>
+              <p className="mt-2 text-sm leading-6 text-slate-300">OpenHealthの導入イメージ資料です。導入時は御社確認済みの写真・文言・返信先に合わせて調整します。</p>
             </div>
             <div className="flex flex-col gap-2 sm:flex-row">
-              <TrackedCtaLink href="mailto:info@openhealth.co.jp?subject=写真見積もり相談デモについて" eventName="happinessclean_demo_email" className="rounded-full bg-white px-5 py-3 text-center font-black text-slate-950">
+              <TrackedCtaLink href="mailto:info@openhealth.co.jp?subject=写真見積もり相談導入イメージについて" eventName="happinessclean_demo_email" className="rounded-full bg-white px-5 py-3 text-center font-black text-slate-950">
                 メールで相談
               </TrackedCtaLink>
               <TrackedCtaLink href="https://line.me/R/ti/p/@447lunpz" eventName="happinessclean_demo_line" className="rounded-full border border-white/20 px-5 py-3 text-center font-black text-white">

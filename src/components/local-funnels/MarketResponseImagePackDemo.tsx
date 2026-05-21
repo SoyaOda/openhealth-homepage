@@ -30,7 +30,7 @@ type Variant = {
 const variants: Record<Variant['slug'], Variant> = {
   'market-reform-photoquote': {
     slug: 'market-reform-photoquote',
-    eyebrow: 'OpenHealth visual MVP',
+    eyebrow: 'OpenHealth 導入イメージ',
     title: '写真・予算・希望時期がそろう外構/リフォーム初回相談',
     subtitle:
       '電話やざっくりフォームだけでは分かりにくい現場状況を、生活者がスマホで写真つき相談として送れる導線に変えます。',
@@ -87,7 +87,7 @@ const variants: Record<Variant['slug'], Variant> = {
   },
   'market-inbound-directbook': {
     slug: 'market-inbound-directbook',
-    eyebrow: 'OpenHealth visual MVP',
+    eyebrow: 'OpenHealth 導入イメージ',
     title: '訪日客が迷わず送れる多言語予約前確認',
     subtitle:
       '言語、人数、日時、注意事項、アクセス不安を先に整理し、体験店舗や小規模宿泊の直接問い合わせへつなげます。',
@@ -144,7 +144,7 @@ const variants: Record<Variant['slug'], Variant> = {
   },
   'market-us-home-missedcall': {
     slug: 'market-us-home-missedcall',
-    eyebrow: 'OpenHealth visual MVP',
+    eyebrow: 'OpenHealth workflow preview',
     title: 'Missed calls become structured callback requests',
     subtitle:
       'For HVAC, plumbing, roofing, landscaping, and cleaning companies, homeowners can leave issue details, photos, urgency, and preferred callback time in one mobile flow.',
@@ -307,15 +307,17 @@ export function MarketResponseImagePackDemo({ slug }: { slug: Variant['slug'] })
           <div className="mx-auto max-w-7xl space-y-10">
             <div className="grid gap-5 lg:grid-cols-[.78fr_1.22fr] lg:items-end">
               <div>
-                <p className={`text-sm font-black uppercase tracking-[.16em] ${variant.text}`}>image MVP pack</p>
+                <p className={`text-sm font-black uppercase tracking-[.16em] ${variant.text}`}>
+                  {isEnglish ? 'workflow preview pack' : '導入イメージ資料'}
+                </p>
                 <h2 className="mt-3 text-4xl font-black leading-tight sm:text-6xl">
-                  {isEnglish ? 'A prospect can understand it in 30 seconds.' : '30秒で伝わる5枚の画面MVP'}
+                  {isEnglish ? 'A ready-to-review workflow in 30 seconds.' : '30秒で伝わる5枚の導入イメージ'}
                 </h2>
               </div>
               <p className="max-w-3xl text-base leading-8 text-slate-600 sm:text-lg">
                 {isEnglish
-                  ? 'The first-touch asset is a safe OpenHealth URL plus preview images/PDF. The full backend is built only after buyer intent appears.'
-                  : '初回接触では、実装済みシステムではなく、OpenHealthの安全なURLとプレビュー画像/PDFで完成像を見せます。反応が出てから個別実装へ進めます。'}
+                  ? 'The OpenHealth URL and preview PDF show the finished workflow shape, including the customer entry point, operator queue, reply flow, and pilot setup path.'
+                  : 'OpenHealthのURLとプレビューPDFで、生活者側の入口、事業者側の確認画面、返信導線、導入時の進め方まで確認できます。'}
               </p>
             </div>
 
@@ -324,7 +326,7 @@ export function MarketResponseImagePackDemo({ slug }: { slug: Variant['slug'] })
                 <article
                   key={screen.id}
                   className="grid overflow-hidden rounded-[2rem] border border-slate-200 bg-white shadow-xl shadow-slate-950/5 lg:grid-cols-[.82fr_1.18fr]"
-                  data-demo-feature={`image-mvp-${screen.id}`}
+                  data-demo-feature={`workflow-preview-${screen.id}`}
                 >
                   <div className="flex min-h-[260px] flex-col justify-between bg-slate-950 p-6 text-white sm:p-8">
                     <div>
@@ -375,7 +377,7 @@ export function MarketResponseImagePackDemo({ slug }: { slug: Variant['slug'] })
               <p className="text-sm font-bold text-white/60">{isEnglish ? 'Price anchor' : '価格アンカー'}</p>
               <strong className="mt-3 block text-3xl font-black leading-tight">{variant.pilot.price}</strong>
               <a
-                href="mailto:info@openhealth.co.jp?subject=OpenHealth%20visual%20MVP%20pilot"
+                href="mailto:info@openhealth.co.jp?subject=OpenHealth%20workflow%20preview%20pilot"
                 className="mt-6 block rounded-full bg-white px-5 py-3 text-center font-black text-slate-950"
               >
                 {isEnglish ? 'Ask about pilot setup' : 'パイロットについて相談する'}

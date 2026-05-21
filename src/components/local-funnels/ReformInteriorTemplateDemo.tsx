@@ -54,8 +54,8 @@ export default function ReformInteriorTemplateDemo() {
       <header className="sticky top-0 z-30 border-b border-stone-200/80 bg-white/92 backdrop-blur-xl">
         <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3">
           <div>
-            <p className="text-xs font-bold uppercase tracking-[0.18em] text-emerald-800">OpenHealth demo shell</p>
-            <h1 className="text-base font-black sm:text-xl">リフォーム・内装向け 写真初回相談デモ</h1>
+            <p className="text-xs font-bold uppercase tracking-[0.18em] text-emerald-800">OpenHealth preview</p>
+            <h1 className="text-base font-black sm:text-xl">リフォーム・内装向け 写真初回相談資料</h1>
           </div>
           <div className="hidden items-center gap-2 text-sm font-bold text-slate-600 sm:flex">
             <span className="rounded-full bg-emerald-100 px-3 py-1 text-emerald-900">写真・予算</span>
@@ -79,7 +79,7 @@ export default function ReformInteriorTemplateDemo() {
                       写真・寸法・予算感を先に受け取る
                     </h2>
                     <p className="max-w-xl text-base leading-8 text-emerald-50/85">
-                      内装、外構、小規模リフォームの初回相談を、写真・希望時期・予算・現地調査条件つきで整理する高単価業種向けの再利用デモです。
+                      内装、外構、小規模リフォームの初回相談を、写真・希望時期・予算・現地調査条件つきで整理する高単価業種向けの再利用導入イメージです。
                     </p>
                   </div>
                   <div className="grid gap-3 rounded-[1.75rem] bg-white p-4 text-slate-950 shadow-2xl">
@@ -132,7 +132,7 @@ export default function ReformInteriorTemplateDemo() {
                 </div>
                 <div className="flex flex-col gap-3 sm:flex-row">
                   <a href="#try" className="rounded-full bg-slate-950 px-5 py-3 text-center font-black text-white shadow-lg hover:-translate-y-0.5">
-                    デモを試す
+                    画面を確認する
                   </a>
                   <TrackedCtaLink
                     href={`${publicAssetBase}/reform-template-demo-preview.pdf`}

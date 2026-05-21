@@ -54,8 +54,8 @@ export default function WorldAirconDemo() {
       <header className="sticky top-0 z-30 border-b border-slate-200/80 bg-white/90 backdrop-blur-xl">
         <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3">
           <div>
-            <p className="text-xs font-bold uppercase tracking-[0.18em] text-cyan-700">OpenHealth demo</p>
-            <h1 className="text-base font-black sm:text-xl">ワールドエアコン様向け 機器写真相談デモ</h1>
+            <p className="text-xs font-bold uppercase tracking-[0.18em] text-cyan-700">OpenHealth preview</p>
+            <h1 className="text-base font-black sm:text-xl">ワールドエアコン様向け 機器写真相談導入イメージ</h1>
           </div>
           <div className="hidden items-center gap-2 text-sm font-bold text-slate-600 sm:flex">
             <span className="rounded-full bg-cyan-100 px-3 py-1 text-cyan-800">型番を先に確認</span>
@@ -78,7 +78,7 @@ export default function WorldAirconDemo() {
                     </span>
                     <h2 className="text-3xl font-black leading-tight sm:text-5xl">室内機・室外機・型番を写真で整理</h2>
                     <p className="max-w-xl text-sm leading-7 text-cyan-50/85 sm:text-base">
-                      型番、設置環境、故障内容、入替希望を電話/メール前にまとめ、対応可否や追加確認を減らすための候補別デモです。
+                      型番、設置環境、故障内容、入替希望を電話/メール前にまとめ、対応可否や追加確認を減らすための候補別導入イメージです。
                     </p>
                   </div>
                   <div className="grid gap-3 rounded-[1.75rem] border border-white/15 bg-white/10 p-4 shadow-2xl backdrop-blur">
@@ -104,7 +104,7 @@ export default function WorldAirconDemo() {
                     写真と型番で、問い合わせ前の確認を短くする相談ページ
                   </h2>
                   <p className="max-w-2xl text-base leading-8 text-slate-600 sm:text-lg">
-                    公開サイトの取付・修理・保守点検案内を活かし、室内機/室外機/型番/設置環境をスマホで整理して送れるデモです。
+                    公開サイトの取付・修理・保守点検案内を活かし、室内機/室外機/型番/設置環境をスマホで整理して送れる導入イメージです。
                     今の電話・メール導線は残したまま、初回確認だけを先に揃えます。
                   </p>
                 </div>
@@ -122,7 +122,7 @@ export default function WorldAirconDemo() {
                 </div>
                 <div className="flex flex-col gap-3 sm:flex-row">
                   <a href="#try" className="rounded-full bg-slate-950 px-5 py-3 text-center font-black text-white shadow-lg hover:-translate-y-0.5">
-                    デモを試す
+                    画面を確認する
                   </a>
                   <TrackedCtaLink
                     href={`${publicAssetBase}/worldaircon-demo-preview.pdf`}
@@ -273,10 +273,10 @@ export default function WorldAirconDemo() {
             <div>
               <p className="text-sm font-black text-cyan-200">OpenHealth</p>
               <h2 className="text-2xl font-black">この導線を実装する場合のご相談</h2>
-              <p className="mt-2 text-sm leading-6 text-slate-300">公開情報だけで作った仮デモです。実装時は御社確認済みの写真・文言・返信先に合わせて調整します。</p>
+              <p className="mt-2 text-sm leading-6 text-slate-300">OpenHealthの導入イメージ資料です。導入時は御社確認済みの写真・文言・返信先に合わせて調整します。</p>
             </div>
             <div className="flex flex-col gap-2 sm:flex-row">
-              <TrackedCtaLink href="mailto:info@openhealth.co.jp?subject=機器写真相談デモについて" eventName="worldaircon_demo_email" className="rounded-full bg-white px-5 py-3 text-center font-black text-slate-950">
+              <TrackedCtaLink href="mailto:info@openhealth.co.jp?subject=機器写真相談導入イメージについて" eventName="worldaircon_demo_email" className="rounded-full bg-white px-5 py-3 text-center font-black text-slate-950">
                 メールで相談
               </TrackedCtaLink>
               <TrackedCtaLink href="https://line.me/R/ti/p/@447lunpz" eventName="worldaircon_demo_line" className="rounded-full border border-white/20 px-5 py-3 text-center font-black text-white">
