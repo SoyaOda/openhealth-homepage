@@ -6,6 +6,11 @@ import SakuraiCleanDemo from './SakuraiCleanDemo'
 import GreenExteriorDemo from './GreenExteriorDemo'
 import SokichiKirikoDemo from './SokichiKirikoDemo'
 import WorldAirconDemo from './WorldAirconDemo'
+import {
+  MarketInboundDirectBookDemo,
+  MarketReformPhotoQuoteDemo,
+  MarketUsHomeMissedCallDemo,
+} from './MarketResponseImagePackDemo'
 
 export type LocalFunnelDemo = {
   slug: string
@@ -111,6 +116,45 @@ export const localFunnelDemos: LocalFunnelDemo[] = [
     previewImagePath: '/assets/local-funnels/reform-template/demo-desktop1440.png',
     previewPdfPath: '/assets/local-funnels/reform-template/reform-template-demo-preview.pdf',
     outreachUse: 'list_wave_template_demo_plus_specific_observation',
+  },
+  {
+    slug: 'market-reform-photoquote',
+    projectId: 'market_response_reform_photoquote_001',
+    title: '外構・リフォーム向け 5画面写真相談MVP',
+    description:
+      '外構/リフォームの初回相談を、写真・予算・希望時期・現調前メモつきで見せるOpenHealthの市場反応検証用ミニLPです。',
+    component: MarketReformPhotoQuoteDemo,
+    noindex: true,
+    publicUrlPath: '/ja/local-funnels/demo/market-reform-photoquote',
+    previewImagePath: '/assets/local-funnels/market-reform-photoquote/demo-desktop1440.png',
+    previewPdfPath: '/assets/local-funnels/market-reform-photoquote/market-reform-photoquote-preview.pdf',
+    outreachUse: 'market_response_image_mvp_internal_until_chatgpt_image_asset_accepted',
+  },
+  {
+    slug: 'market-inbound-directbook',
+    projectId: 'market_response_inbound_directbook_001',
+    title: 'インバウンド店舗向け 多言語予約前確認MVP',
+    description:
+      '訪日客の言語・人数・日時・注意事項を整理して直接問い合わせへつなげるOpenHealthの市場反応検証用ミニLPです。',
+    component: MarketInboundDirectBookDemo,
+    noindex: true,
+    publicUrlPath: '/ja/local-funnels/demo/market-inbound-directbook',
+    previewImagePath: '/assets/local-funnels/market-inbound-directbook/demo-desktop1440.png',
+    previewPdfPath: '/assets/local-funnels/market-inbound-directbook/market-inbound-directbook-preview.pdf',
+    outreachUse: 'market_response_image_mvp_internal_until_official_routes_and_assets_ready',
+  },
+  {
+    slug: 'market-us-home-missedcall',
+    projectId: 'market_response_us_home_missedcall_001',
+    title: 'US Home Services Missed-Call Recovery MVP',
+    description:
+      'Missed calls become structured callback and quote requests for HVAC, plumbing, roofing, landscaping, and cleaning companies.',
+    component: MarketUsHomeMissedCallDemo,
+    noindex: true,
+    publicUrlPath: '/ja/local-funnels/demo/market-us-home-missedcall',
+    previewImagePath: '/assets/local-funnels/market-us-home-missedcall/demo-desktop1440.png',
+    previewPdfPath: '/assets/local-funnels/market-us-home-missedcall/market-us-home-missedcall-preview.pdf',
+    outreachUse: 'market_response_image_mvp_internal_until_us_channel_review',
   },
 ]
 
